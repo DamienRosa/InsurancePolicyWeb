@@ -9,13 +9,18 @@
 
 </head>
 <body>
-    <header>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
-                <img src="@Url.Content("~/Content/ASSETS/HEADER_FOOTER/ic_logo_header.png")"
+                <div class="row">
+                    <div class="col-md-10 col-xs-8">
+                        <a href="#"><img src="@Url.Content("~/Content/ASSETS/HEADER_FOOTER/ic_logo_header.png")" /></a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#"><img src="@Url.Content("~/Content/ASSETS/HEADER_FOOTER/ic_logo_header.png")" /></a>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
     @{ var menuVis = true; }
     @if (menuVis)
     {
