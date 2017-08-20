@@ -5,19 +5,29 @@
 
 .container-colored-grey {
     background-color: #f3f3f3;
+    padding-bottom: 50px;
 }
 
-footer {
-    background-color:#014751;
+/*footer {
+    background-color: #014751;
     color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 40px;
 }
+
+    footer > a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }*/
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-top: 50px;
+    padding-top: 75px;
     margin-top: auto;
     padding-left: 15px;
     padding-right: 15px;
+    background-color: white;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -61,8 +71,15 @@ textarea {
     background-color: #014751;
     color: #FFFFFF;
 }
+
     .btn-login:hover,
     .btn-login:focus {
         background-color: #002328;
         text-decoration: none;
     }
+
+.copyrights {
+    color: #014751;
+    font-size: 12px;
+    font-family: Philosopher;
+}

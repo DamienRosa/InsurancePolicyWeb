@@ -34,7 +34,7 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="active">@Html.ActionLink("INÍCIO", "Index", "Home")</li>
-                                <li>@Html.ActionLink("ÁREA PESSOAL", "", "")</li>
+                                <li>@Html.ActionLink("ÁREA PESSOAL", "Details", "UserViewModel")</li>
                                 <li>@Html.ActionLink("SEGUROS", "", "")</li>
                             </ul>
                         </div>
@@ -44,16 +44,58 @@
         </div>
     </header>
 
-    @*<div class="container body-content">*@
-        @RenderBody()
-    @*</div>*@
+    @RenderBody()
 
-    <footer>
+    <div class="panel panel-footer">
         <div class="container">
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Particulares</a></li>
+                        <li><a href="#">Empresas</a></li>
+                        <li><a href="#">Contactos</a></li>
+                        <li><a href="#">Apoio ao cliente</a></li>
+                        <li><a href="#">Mapa do site</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Mapa de Agências</a></li>
+                        <li><a href="#">Missão e Valores</a></li>
+                        <li><a href="#">História</a></li>
+                        <li><a href="#">Órgãos Sociais</a></li>
+                        <li><a href="#">Relatório de contas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li>Telefone</li>
+                        <li>+244</li>
+                        <li>22716406</li>
+                        <li>Email</li>
+                        <li><a href="#">geral@protteja.co.ao</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list list-unstyled">
+                        <li>Ligue-se a nós!</li>
+                        <li>
+                            <ul class="list list-inline">
+                                <li><a href="#"><img src="~/Content/ASSETS/HEADER_FOOTER/ic_facebook.png"/></a></li>
+                                <li><a href="#"><img src="~/Content/ASSETS/HEADER_FOOTER/ic_google.png" /></a></li>
+                                <li><a href="#"><img src="~/Content/ASSETS/HEADER_FOOTER/ic_twitter.png" /></a></li>
+                                <li><a href="#"><img src="~/Content/ASSETS/HEADER_FOOTER/ic_youtube.png" /></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </footer>
 
+    </div>
+    <div class="container copyrights">
+       Copyright Protteja S.A. &copy; @DateTime.Now.Year - Todos os direitos reservados
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

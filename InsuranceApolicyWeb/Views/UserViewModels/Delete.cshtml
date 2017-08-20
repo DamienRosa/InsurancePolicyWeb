@@ -1,0 +1,152 @@
+﻿@model InsuranceApolicyWeb.Models.UserViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UserViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Role)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Role)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DocumentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DocumentType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DocumentNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DocumentNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressNeighborhood)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressNeighborhood)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressTown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressTown)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressDistrict)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressDistrict)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumberHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumberHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumberPersonal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumberPersonal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientNumber)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
