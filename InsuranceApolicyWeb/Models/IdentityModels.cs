@@ -29,7 +29,6 @@ namespace InsuranceApolicyWeb.Models
         {
             return new ApplicationDbContext();
         }
-
-        public System.Data.Entity.DbSet<InsuranceApolicyWeb.Models.UserViewModel> UserViewModels { get; set; }
+        
     }
 }

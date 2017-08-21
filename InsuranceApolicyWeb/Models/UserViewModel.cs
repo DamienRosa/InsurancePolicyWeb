@@ -7,8 +7,10 @@ using System.Web;
 namespace InsuranceApolicyWeb.Models
 {
     public enum DocumentType { BI, CC, PASSPORT }
+
     public enum ClientType { P, E }
 
+    public enum RoleType { Mr, Ms, Mrs }
 
     public class UserViewModel
     {
@@ -16,7 +18,7 @@ namespace InsuranceApolicyWeb.Models
         [Key]
         public string NIF { get; set; }
 
-        public string Role { get; set; }
+        public RoleType Role { get; set; }
 
         public ClientType ClientType { get; set; }
 
@@ -47,6 +49,5 @@ namespace InsuranceApolicyWeb.Models
         public string Photo { get; set; }
 
         public string ClientNumber { get; set; }
-
     }
 }

@@ -1,28 +1,26 @@
 ﻿@using Microsoft.AspNet.Identity
 @if (Request.IsAuthenticated)
 {
-    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right form-inline" }))
     {
         @Html.AntiForgeryToken()
-
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a href="@Url.Action("In    dex", "Manage")"><img src="~/Content/ASSETS/HEADER_FOOTER/ic_message_header.png" /></a>
+                <a href="@Url.Action("Index", "Manage")"><img src="~/Content/ASSETS/HEADER_FOOTER/ic_message_header.png" /></a>
             </li>
             <li><img style="padding-left: 10px; padding-right:10px" src="@Url.Content("~/Content/ASSETS/HEADER_FOOTER/ic_user_header.png")" /></li>
-            <li>
-                <div>CLIENTE: User.Identity.GetUserName()</div>
+            <li valign="middle">
+                <div>CLIENTE: @User.Identity.GetUserName()</div>
                 <div>User.Identity.GetLocation()</div>
                 <div><a href="javascript:document.getElementById('logoutForm').submit()">SAIR ></a></div>
             </li>
         </ul>
     }
-
 }
-@*else
-{
-    <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
-}*@
+    @*else
+        {
+            <ul class="nav navbar-nav navbar-right">
+                <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+            </ul>
+        }*@

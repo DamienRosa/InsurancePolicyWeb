@@ -6,18 +6,19 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using InsuranceApolicyWeb.DAL;
 using InsuranceApolicyWeb.Models;
 
 namespace InsuranceApolicyWeb.Controllers
 {
     public class UserViewModelsController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private InsurancePolicyContext db = new InsurancePolicyContext();
 
         // GET: UserViewModels
         public ActionResult Index()
         {
-            return View(db.UserViewModels.ToList());
+            return View(db.Users.ToList());
         }
 
         // GET: UserViewModels/Details/5
@@ -27,7 +28,7 @@ namespace InsuranceApolicyWeb.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserViewModel userViewModel = db.UserViewModels.Find(id);
+            UserViewModel userViewModel = db.Users.Find(id);
             if (userViewModel == null)
             {
                 return HttpNotFound();
@@ -50,7 +51,7 @@ namespace InsuranceApolicyWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.UserViewModels.Add(userViewModel);
+                db.Users.Add(userViewModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +66,7 @@ namespace InsuranceApolicyWeb.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserViewModel userViewModel = db.UserViewModels.Find(id);
+            UserViewModel userViewModel = db.Users.Find(id);
             if (userViewModel == null)
             {
                 return HttpNotFound();
@@ -96,7 +97,7 @@ namespace InsuranceApolicyWeb.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserViewModel userViewModel = db.UserViewModels.Find(id);
+            UserViewModel userViewModel = db.Users.Find(id);
             if (userViewModel == null)
             {
                 return HttpNotFound();
@@ -109,8 +110,8 @@ namespace InsuranceApolicyWeb.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            UserViewModel userViewModel = db.UserViewModels.Find(id);
-            db.UserViewModels.Remove(userViewModel);
+            UserViewModel userViewModel = db.Users.Find(id);
+            db.Users.Remove(userViewModel);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
