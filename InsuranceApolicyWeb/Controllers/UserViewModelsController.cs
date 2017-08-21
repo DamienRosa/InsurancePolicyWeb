@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using InsuranceApolicyWeb.DAL;
 using InsuranceApolicyWeb.Models;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace InsuranceApolicyWeb.Controllers
 {
+    [Authorize]
     public class UserViewModelsController : Controller
     {
         private InsurancePolicyContext db = new InsurancePolicyContext();

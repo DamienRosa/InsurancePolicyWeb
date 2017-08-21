@@ -13,6 +13,7 @@
         </p>*@
 
     <h5 class="text-uppercase">INFORMAÇÃO DE CLIENTE</h5>
+
     <div class="row personal-data">
         <div class="col-md-6 col-sm-6">
             <div class="row">
@@ -54,11 +55,50 @@
         </div>
 
         <div class="col-md-6 col-sm-6">
-            <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.ClientType)</b></div>
-            <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.ClientType)</div>
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.ClientType)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.ClientType)</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.Name)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.Name)</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.DocumentNumber)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.DocumentNumber)</div>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.AddressNumber)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.AddressNumber)</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.AddressTown)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.AddressTown)</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.PhoneNumberPersonal)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.PhoneNumberPersonal)</div>
+            </div>
+
         </div>
-    </div>
-    <div class="row">
 
     </div>
+
+    <br />
+
+    <h5 class="text-uppercase">INFORMAÇÃO DE CLIENTE</h5>
+
+    <div class="row  personal-data">
+        <div class="col-md-4">
+            <img src="~/Content/ASSETS/"
+        </div>
+    </div>
+
 </div>
