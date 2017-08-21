@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using InsuranceApolicyWeb.DAL;
 using InsuranceApolicyWeb.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace InsuranceApolicyWeb.Controllers
 {
@@ -18,7 +19,11 @@ namespace InsuranceApolicyWeb.Controllers
         // GET: UserViewModels
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+            string username = User.Identity.Name;
+
+            var user = db.Users.Where(u => u.Email == username).SingleOrDefault();
+
+            return View(user);
         }
 
         // GET: UserViewModels/Details/5

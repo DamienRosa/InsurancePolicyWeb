@@ -4210,35 +4210,35 @@ textarea.input-group-sm > .input-group-btn > .btn {
     color: #ffffff;
 }
 
-    .navbar-right a {
-        text-decoration: none;
-        color: #FFFFFF;
-    }
+.navbar-right a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
     .navbar-right a:hover,
     .navbar-right a:active {
         color: #333333;
     }
-    
-    .navbar:before,
-    .navbar:after {
-        display: table;
-        content: " ";
-    }
 
-    .navbar:after {
-        clear: both;
-    }
+.navbar:before,
+.navbar:after {
+    display: table;
+    content: " ";
+}
 
-    .navbar:before,
-    .navbar:after {
-        display: table;
-        content: " ";
-    }
+.navbar:after {
+    clear: both;
+}
 
-    .navbar:after {
-        clear: both;
-    }
+.navbar:before,
+.navbar:after {
+    display: table;
+    content: " ";
+}
+
+.navbar:after {
+    clear: both;
+}
 
 @media (min-width: 768px) {
     .navbar {
@@ -5628,10 +5628,11 @@ a.list-group-item {
         text-decoration: none;
         color: #FFFFFF;
     }
-    .panel-footer li > a:active,
-    .panel-footer li > a:hover {
-        color: #FFFFFF;
-    }
+
+        .panel-footer li > a:active,
+        .panel-footer li > a:hover {
+            color: #FFFFFF;
+        }
 
 .panel-group .panel {
     margin-bottom: 0;
@@ -7107,3 +7108,26 @@ td.visible-print {
         display: none !important;
     }
 }
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.personal-data {
+    background-color: #f3f3f3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+    .personal-data .th {
+        text-align: right;
+        color: #014751;
+    }
+    
+    .personal-data .td {
+        text-align: left;
+        color: #363636;
+    }
+    .personal-data .row > div {
+        margin: 2px;
+    }

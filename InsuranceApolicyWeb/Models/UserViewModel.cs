@@ -14,8 +14,8 @@ namespace InsuranceApolicyWeb.Models
 
     public class UserViewModel
     {
-        [Required]
-        [Key]
+        public int ID { get; set; }
+
         public string NIF { get; set; }
 
         public RoleType Role { get; set; }

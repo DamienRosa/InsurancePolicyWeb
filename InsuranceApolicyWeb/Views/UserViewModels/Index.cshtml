@@ -1,134 +1,64 @@
-﻿@model IEnumerable<InsuranceApolicyWeb.Models.UserViewModel>
+﻿@model InsuranceApolicyWeb.Models.UserViewModel
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Dados Pessoais";
 }
 
 <div class="container body-content">
 
-    <h2>Index</h2>
+    <h3 class="text-uppercase">Dados Pessoais</h3>
 
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NIF)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Role)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ClientType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DocumentType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DocumentNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AddressStreet)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AddressNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AddressNeighborhood)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AddressTown)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AddressCity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AddressDistrict)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneNumberHome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneNumberPersonal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Photo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ClientNumber)
-            </th>
-            <th></th>
-        </tr>
+    @*<p>
+            @Html.ActionLink("Create New", "Create")
+        </p>*@
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NIF)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Role)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ClientType)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DocumentType)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DocumentNumber)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AddressStreet)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AddressNumber)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AddressNeighborhood)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AddressTown)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AddressCity)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AddressDistrict)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PhoneNumberHome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PhoneNumberPersonal)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Photo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ClientNumber)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.NIF }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.NIF }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.NIF })
-                </td>
-            </tr>
-        }
+    <h5 class="text-uppercase">INFORMAÇÃO DE CLIENTE</h5>
+    <div class="row personal-data">
+        <div class="col-md-6 col-sm-6">
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.NIF)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.NIF)</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.Role)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.Role)</div>
+            </div>
 
-    </table>
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.DocumentType)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.DocumentType)</div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.AddressStreet)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.AddressStreet)</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.AddressNeighborhood)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.AddressNeighborhood)</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.AddressCity)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.AddressCity)</div>
+            </div>
 
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.PhoneNumberHome)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.PhoneNumberHome)</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.Email)</b></div>
+                <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.Email)</div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6">
+            <div class="col-md-4 col-sm-3 th"><b>@Html.DisplayNameFor(model => model.ClientType)</b></div>
+            <div class="col-md-4 col-sm-3 td">@Html.DisplayFor(model => model.ClientType)</div>
+        </div>
+    </div>
+    <div class="row">
+
+    </div>
 </div>
