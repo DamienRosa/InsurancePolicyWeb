@@ -4495,6 +4495,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
     }
 }
 
+@media (max-width: 768px) {
+.navbar-right {
+        display: none;
+    }
+}
+
 .navbar-form {
     padding: 10px 15px;
     margin-top: 8px;
@@ -7117,12 +7123,25 @@ td.visible-print {
     background-color: #f3f3f3;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 12px;
 }
 
     .personal-data .th {
         text-align: right;
         color: #014751;
     }
+
+@media (max-width: 767px) {
+    .personal-data .th {
+        text-align: left;
+    }
+}
+
+@media (max-width: 991px)  {
+    .personal-data .th {
+        text-align: left;
+    }
+}
     
     .personal-data .td {
         text-align: left;

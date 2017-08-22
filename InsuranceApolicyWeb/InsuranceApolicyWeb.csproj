@@ -196,6 +196,14 @@
     <Compile Include="Migrations\201708211758163_updatedUserModel2.Designer.cs">
       <DependentUpon>201708211758163_updatedUserModel2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708220941351_NewDb.cs" />
+    <Compile Include="Migrations\201708220941351_NewDb.Designer.cs">
+      <DependentUpon>201708220941351_NewDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708221737438_userViewModelChange4.cs" />
+    <Compile Include="Migrations\201708221737438_userViewModelChange4.Designer.cs">
+      <DependentUpon>201708221737438_userViewModelChange4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -224,7 +232,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -261,6 +271,7 @@
     <Content Include="Views\UserViewModels\Details.cshtml" />
     <Content Include="Views\UserViewModels\Edit.cshtml" />
     <Content Include="Views\UserViewModels\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -288,6 +299,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708211758163_updatedUserModel2.resx">
       <DependentUpon>201708211758163_updatedUserModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708220941351_NewDb.resx">
+      <DependentUpon>201708220941351_NewDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708221737438_userViewModelChange4.resx">
+      <DependentUpon>201708221737438_userViewModelChange4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
