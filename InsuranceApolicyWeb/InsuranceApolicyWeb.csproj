@@ -204,10 +204,23 @@
     <Compile Include="Migrations\201708221737438_userViewModelChange4.Designer.cs">
       <DependentUpon>201708221737438_userViewModelChange4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708222316534_addedPolicy.cs" />
+    <Compile Include="Migrations\201708222316534_addedPolicy.Designer.cs">
+      <DependentUpon>201708222316534_addedPolicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708222328382_addedPolicy1.cs" />
+    <Compile Include="Migrations\201708222328382_addedPolicy1.Designer.cs">
+      <DependentUpon>201708222328382_addedPolicy1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708222334505_addedPolicy2.cs" />
+    <Compile Include="Migrations\201708222334505_addedPolicy2.Designer.cs">
+      <DependentUpon>201708222334505_addedPolicy2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Policy.cs" />
     <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -305,6 +318,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708221737438_userViewModelChange4.resx">
       <DependentUpon>201708221737438_userViewModelChange4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708222316534_addedPolicy.resx">
+      <DependentUpon>201708222316534_addedPolicy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708222328382_addedPolicy1.resx">
+      <DependentUpon>201708222328382_addedPolicy1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708222334505_addedPolicy2.resx">
+      <DependentUpon>201708222334505_addedPolicy2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

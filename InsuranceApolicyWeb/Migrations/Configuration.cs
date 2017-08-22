@@ -22,6 +22,21 @@ namespace InsuranceApolicyWeb.Migrations
             };
             users.ForEach(s => context.Users.Add(s));
             context.SaveChanges();
+
+            var policies = new List<Policy> {
+                new Policy { UserViewModelID = 1, PolicyNumber = 123456789, PolicyType = PolicyType.Travel, TotalAnnualReward = 1234567, State = "Activo", CriationDate = DateTime.Now , BusinessUnity = "Coqueiros" , Product = "Responsabilidade Civil", Currency = "Euro", ExpirationDate = DateTime.Now.AddMonths(12),
+                MediatingAgent = "-", Branch = "Não vida", PaymentMethod = "Numerario", Fractionation = "Trimestral", LocationWarranty = "-"  },
+
+                new Policy { UserViewModelID = 1, PolicyNumber = 123456789, PolicyType = PolicyType.Travel, TotalAnnualReward = 1234567, State = "Activo", CriationDate = DateTime.Now , BusinessUnity = "Coqueiros" , Product = "Responsabilidade Civil", Currency = "Euro", ExpirationDate = DateTime.Now.AddMonths(12),
+                MediatingAgent = "-", Branch = "Não vida", PaymentMethod = "Numerario", Fractionation = "Trimestral", LocationWarranty = "-"  },
+
+                new Policy { UserViewModelID = 1, PolicyNumber = 123456789, PolicyType = PolicyType.Travel, TotalAnnualReward = 1234567, State = "Activo", CriationDate = DateTime.Now , BusinessUnity = "Coqueiros" , Product = "Responsabilidade Civil", Currency = "Euro", ExpirationDate = DateTime.Now.AddMonths(12),
+                MediatingAgent = "-", Branch = "Não vida", PaymentMethod = "Numerario", Fractionation = "Trimestral", LocationWarranty = "-"  },
+                new Policy { UserViewModelID = 1, PolicyNumber = 123456789, PolicyType = PolicyType.Travel, TotalAnnualReward = 1234567, State = "Activo", CriationDate = DateTime.Now , BusinessUnity = "Coqueiros" , Product = "Responsabilidade Civil", Currency = "Euro", ExpirationDate = DateTime.Now.AddMonths(12),
+                MediatingAgent = "-", Branch = "Não vida", PaymentMethod = "Numerario", Fractionation = "Trimestral", LocationWarranty = "-"  }
+            };
+            policies.ForEach(p => context.Policies.Add(p));
+            context.SaveChanges();
         }
     }
 }

@@ -6,23 +6,30 @@ using System.Web;
 
 namespace InsuranceApolicyWeb.Models
 {
-    public enum DocumentType { BI, CC,
+    public enum DocumentType
+    {
+        BI, CC,
         [Display(Name = "Passaport")]
-        PASSPORT }
+        PASSPORT
+    }
 
-    public enum ClientType {
+    public enum ClientType
+    {
         [Display(Name = "Particulares")]
         P,
         [Display(Name = "Empresas")]
-        E }
+        E
+    }
 
-    public enum RoleType {
+    public enum RoleType
+    {
         [Display(Name = "Sr.")]
         Mr,
         [Display(Name = "Sra.")]
         Ms,
         [Display(Name = "Sra.")]
-        Mrs }
+        Mrs
+    }
 
     public class UserViewModel
     {
@@ -74,5 +81,8 @@ namespace InsuranceApolicyWeb.Models
         public string Photo { get; set; }
 
         public string ClientNumber { get; set; }
+
+        public virtual ICollection<Policy> Policies { get; set; }
+
     }
 }
