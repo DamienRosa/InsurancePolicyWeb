@@ -2113,6 +2113,12 @@ textarea.input-lg {
     color: #737373;
 }
 
+.form-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (min-width: 768px) {
     .form-inline .form-group {
         display: inline-block;
@@ -4496,7 +4502,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 @media (max-width: 768px) {
-.navbar-right {
+    .navbar-right {
         display: none;
     }
 }
@@ -7137,16 +7143,22 @@ td.visible-print {
     }
 }
 
-@media (max-width: 991px)  {
+@media (max-width: 991px) {
     .personal-data .th {
         text-align: left;
     }
 }
-    
-    .personal-data .td {
-        text-align: left;
-        color: #363636;
-    }
-    .personal-data .row > div {
-        margin: 2px;
-    }
+
+.personal-data .td {
+    text-align: left;
+    color: #363636;
+}
+
+.personal-data .row > div {
+    margin: 2px;
+}
+
+.carousel-item-header {
+    color: #014751;
+    font-size: 12px;
+}

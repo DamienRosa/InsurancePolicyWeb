@@ -14,7 +14,7 @@ namespace InsuranceApolicyWeb.Models
         Car
     }
 
-    public class Policy
+    public class PolicyModel
     {
         public int ID { get; set; }
 

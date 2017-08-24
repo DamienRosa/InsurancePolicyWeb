@@ -13,6 +13,6 @@ namespace InsuranceApolicyWeb.DAL
         }
 
         public DbSet<UserViewModel> Users { get; set; }
-        public DbSet<Policy> Policies { get; set; }
+        public DbSet<PolicyModel> Policies { get; set; }
     }
 }

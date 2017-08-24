@@ -1,0 +1,146 @@
+﻿@model InsuranceApolicyWeb.Models.PolicyModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PolicyModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.NIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.NIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolicyType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolicyNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalAnnualReward)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalAnnualReward)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CriationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CriationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessUnity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessUnity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Currency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Currency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpirationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpirationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MediatingAgent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MediatingAgent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Branch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Branch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentMethod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fractionation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fractionation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationWarranty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationWarranty)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

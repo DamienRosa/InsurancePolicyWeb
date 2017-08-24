@@ -82,7 +82,7 @@ namespace InsuranceApolicyWeb.Models
 
         public string ClientNumber { get; set; }
 
-        public virtual ICollection<Policy> Policies { get; set; }
+        public virtual ICollection<PolicyModel> Policies { get; set; }
 
     }
 }
