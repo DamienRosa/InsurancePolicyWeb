@@ -1905,7 +1905,6 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 12px;
     line-height: 1.428571429;
     color: #555555;
-    vertical-align: middle;
     background-color: #ffffff;
     border: 1px solid #cccccc;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -1943,7 +1942,6 @@ textarea.form-control {
     padding-left: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    vertical-align: middle;
 }
 
     .radio label,
@@ -6303,35 +6301,17 @@ button.close {
 
 .carousel-control {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 50%;
     left: 0;
-    width: 15%;
-    font-size: 20px;
-    color: #ffffff;
-    text-align: center;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-    opacity: 0.5;
-    filter: alpha(opacity=50);
 }
 
     .carousel-control.left {
-        background-image: -webkit-gradient(linear, 0 top, 100% top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
-        background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.5) 0), color-stop(rgba(0, 0, 0, 0.0001) 100%));
-        background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%);
-        background-repeat: repeat-x;
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
     }
 
     .carousel-control.right {
         right: 0;
         left: auto;
-        background-image: -webkit-gradient(linear, 0 top, 100% top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
-        background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001) 0), color-stop(rgba(0, 0, 0, 0.5) 100%));
-        background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.5) 100%);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.5) 100%);
-        background-repeat: repeat-x;
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
     }
 
@@ -6370,6 +6350,22 @@ button.close {
         .carousel-control .icon-next:before {
             content: '\203a';
         }
+
+    .carousel-control.left > img:hover {
+        background: transparent url(../Content/ASSETS/SELECTORS/ic_arrow_selector_left_hover.png) no-repeat;
+    }
+
+    .carousel-control.right > img:hover {
+        background: transparent url(../Content/ASSETS/SELECTORS/ic_arrow_selector_right_hover.png) no-repeat;
+    }
+
+    .carousel-control.left > img {
+        background: transparent url(../Content/ASSETS/SELECTORS/ic_arrow_selector_left.png) no-repeat;
+    }
+
+    .carousel-control.right > img {
+        background: transparent url(../Content/ASSETS/SELECTORS/ic_arrow_selector_right.png) no-repeat;
+    }
 
 .carousel-indicators {
     position: absolute;
@@ -7119,46 +7115,4 @@ td.visible-print {
     td.hidden-print {
         display: none !important;
     }
-}
-
-.text-uppercase {
-    text-transform: uppercase;
-}
-
-.personal-data {
-    background-color: #f3f3f3;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 12px;
-}
-
-    .personal-data .th {
-        text-align: right;
-        color: #014751;
-    }
-
-@media (max-width: 767px) {
-    .personal-data .th {
-        text-align: left;
-    }
-}
-
-@media (max-width: 991px) {
-    .personal-data .th {
-        text-align: left;
-    }
-}
-
-.personal-data .td {
-    text-align: left;
-    color: #363636;
-}
-
-.personal-data .row > div {
-    margin: 2px;
-}
-
-.carousel-item-header {
-    color: #014751;
-    font-size: 12px;
 }

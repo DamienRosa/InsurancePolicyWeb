@@ -22,8 +22,11 @@ namespace InsuranceApolicyWeb.Models
 
         public int PolicyNumber { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:n2}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Prémio Total Anual")]
         public double TotalAnnualReward { get; set; }
 
+        [Display(Name = "Estado")]
         public string State { get; set; }
 
         public DateTime CriationDate { get; set; }

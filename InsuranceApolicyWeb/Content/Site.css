@@ -70,3 +70,69 @@ textarea {
     font-size: 12px;
     font-family: Philosopher;
 }
+
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.personal-data {
+    background-color: #f3f3f3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 12px;
+}
+
+    .personal-data .th {
+        text-align: right;
+        color: #014751;
+    }
+
+@media (max-width: 767px) {
+    .personal-data .th {
+        text-align: left;
+    }
+}
+
+@media (max-width: 991px) {
+    .personal-data .th {
+        text-align: left;
+    }
+}
+
+.personal-data .td {
+    text-align: left;
+    color: #363636;
+}
+
+.personal-data .row > div {
+    margin: 2px;
+}
+
+.carousel-item-header {
+    background-color: #014751;
+    color: #ffffff;
+}
+
+.carousel-item-row {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 5px;
+}
+
+.carousel-item-content {
+    background-color: #f3f3f3;
+}
+
+.carousel-item-content-label {
+    font-size: 12px;
+    color: #616161;
+}
+
+.carousel-content-amount {
+    color: #014751;
+}
+
+.carousel-content-state {
+    color: #823845;
+}

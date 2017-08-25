@@ -5,288 +5,128 @@
 }
 
 <div class="container body-content">
+
     <h2 class="text-uppercase">As minhas apólices</h2>
 
     @*<p>
             @Html.ActionLink("Create New", "Create")
         </p>*@
-    <div class="row">
-        <div class="col-md-12">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    @*@foreach (var item in Model)
-                        {*@
 
-                    <div class="item active">
+    <div id="myCarousel" class="carousel slide container" data-ride="carousel">
 
+        <div class="carousel-inner">
+
+            @for (int i = 0; i <= Model.Count() / 3; i++)
+            {
+                string active = (i % 3 == 0) ? "active" : "";
+                <div class="item @active">
+
+                    @foreach (var item in Model.Skip(i * 3).Take(3))
+                    {
                         <div class="col-md-4">
-                            <table class="tg">
-                                <tr style="background-color: aquamarine">
-                                    <th class="tg-yw4l">Seguro Automovel</th>
-                                    <th class="tg-baqh" rowspan="2"><img src="~/Content/ASSETS/SELECTORS/ic_auto_selector.png" /></th>
-                                </tr>
-                                <tr style="background-color: aquamarine">
-                                    <td class="tg-yw4l">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                            </table>
+
+                            <div class="row carousel-item-row carousel-item-header">
+                                <div class="col-md-9">
+                                    <div>@Html.DisplayFor(m => item.PolicyType)</div>
+                                    <div>Apólice nº @item.PolicyNumber</div>
+                                </div>
+                                <div class="col-md-3">
+                                    @if (item.PolicyType == InsuranceApolicyWeb.Models.PolicyType.Car)
+                                    {
+                                        <img src="~/Content/ASSETS/SELECTORS/ic_travel_selector.png" />
+                                    }
+                                    else
+                                    {
+                                        <img src="~/Content/ASSETS/SELECTORS/ic_travel_selector.png" />
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="row carousel-item-row carousel-item-content">
+                                <div class="col-md-12">
+                                    <div class="carousel-item-content-label">@Html.DisplayNameFor(m => m.TotalAnnualReward)</div>
+                                    <div class="carousel-content-amount">@Html.DisplayFor(m => item.TotalAnnualReward) <span style="color: #929292">@Html.DisplayFor(m => item.Currency)</span></div>
+                                    <div class="carousel-item-content-label">@Html.DisplayNameFor(m => m.State)</div>
+                                    <div class="carousel-content-state">@Html.DisplayFor(m => item.State)</div>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="col-md-4">
-                            <table class="tg">
-                                <tr style="background-color: aquamarine">
-                                    <th class="tg-yw4l">Seguro Automovel</th>
-                                    <th class="tg-baqh" rowspan="2"><img src="~/Content/ASSETS/SELECTORS/ic_auto_selector.png" /></th>
-                                </tr>
-                                <tr style="background-color: aquamarine">
-                                    <td class="tg-yw4l">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div class="col-md-4">
-                            <table class="tg">
-                                <tr style="background-color: aquamarine">
-                                    <th class="tg-yw4l">Seguro Automovel</th>
-                                    <th class="tg-baqh" rowspan="2"><img src="~/Content/ASSETS/SELECTORS/ic_auto_selector.png" /></th>
-                                </tr>
-                                <tr style="background-color: aquamarine">
-                                    <td class="tg-yw4l">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-
-
-                    <div class="item">
-
-                        <div class="col-md-4">
-                            <table class="tg">
-                                <tr style="background-color: aquamarine">
-                                    <th class="tg-yw4l">Seguro Automovel</th>
-                                    <th class="tg-baqh" rowspan="2"><img src="~/Content/ASSETS/SELECTORS/ic_auto_selector.png" /></th>
-                                </tr>
-                                <tr style="background-color: aquamarine">
-                                    <td class="tg-yw4l">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div class="col-md-4">
-                            <table class="tg">
-                                <tr style="background-color: aquamarine">
-                                    <th class="tg-yw4l">Seguro Automovel</th>
-                                    <th class="tg-baqh" rowspan="2"><img src="~/Content/ASSETS/SELECTORS/ic_auto_selector.png" /></th>
-                                </tr>
-                                <tr style="background-color: aquamarine">
-                                    <td class="tg-yw4l">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div class="col-md-4">
-                            <table class="tg">
-                                <tr style="background-color: aquamarine">
-                                    <th class="tg-yw4l">Seguro Automovel</th>
-                                    <th class="tg-baqh" rowspan="2"><img src="~/Content/ASSETS/SELECTORS/ic_auto_selector.png" /></th>
-                                </tr>
-                                <tr style="background-color: aquamarine">
-                                    <td class="tg-yw4l">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Seguro Automovel</td>
-                                </tr>
-                                <tr style="background-color: lightgrey">
-                                    <td class="tg-yw4l" colspan="2">Apólice nº 123456</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    @*}*@
+                    }
                 </div>
-            </div>
+            }
         </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <img />
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <img />
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 
-
-    @*<table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.User.NIF)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.PolicyType)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.PolicyNumber)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.TotalAnnualReward)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.State)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CriationDate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.BusinessUnity)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Product)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ClientNumber)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Currency)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ExpirationDate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.MediatingAgent)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Branch)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.PaymentMethod)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Fractionation)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.LocationWarranty)
-                </th>
-                <th></th>
-            </tr>
-
-            @foreach (var item in Model)
-            {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.User.NIF)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PolicyType)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PolicyNumber)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TotalAnnualReward)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.State)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CriationDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.BusinessUnity)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Product)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ClientNumber)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Currency)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ExpirationDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MediatingAgent)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Branch)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PaymentMethod)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Fractionation)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LocationWarranty)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                </td>
-            </tr>
-            }
-
-        </table>*@
 </div>
+
+
+@*
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.NIF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolicyType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolicyNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalAnnualReward)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CriationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessUnity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Currency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpirationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MediatingAgent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Branch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fractionation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationWarranty)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+        }
+
+    </table>*@
