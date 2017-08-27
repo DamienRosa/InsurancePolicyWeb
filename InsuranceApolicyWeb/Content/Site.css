@@ -136,3 +136,7 @@ textarea {
 .carousel-content-state {
     color: #823845;
 }
+
+.selected-product-content {
+    margin-top: 50px;
+}

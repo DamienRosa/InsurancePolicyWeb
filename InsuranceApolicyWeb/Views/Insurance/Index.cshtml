@@ -16,9 +16,9 @@
 
         <div class="carousel-inner">
 
-            @for (int i = 0; i <= Model.Count() / 3; i++)
+            @for (int i = 0; i < Model.Count() / 3; i++)
             {
-                string active = (i % 3 == 0) ? "active" : "";
+                string active = (i % 3 == 0 || i == 0) ? "active" : "";
                 <div class="item @active">
 
                     @foreach (var item in Model.Skip(i * 3).Take(3))
@@ -67,66 +67,36 @@
         </a>
     </div>
 
+    <hr />
+
+    <div class="row selected-product-content">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" class="text-uppercase" href="#generalDataTab">Dados Gerais</a></li>
+            <li><a data-toggle="tab" href="#conditionsTab" class="text-uppercase">Condições</a></li>
+            <li><a data-toggle="tab" href="#documentsTab" class="text-uppercase">Documentos</a></li>
+        </ul>
+
+        <div class="tab-content" >
+            <div id="generalDataTab" class="tab-pane fade in active">
+                <p>
+                    There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+                    for details on setting up this ASP.NET application to support two-factor authentication.
+                </p>
+            </div>
+            <div id="conditionsTab" class="tab-pane fade">
+                <p>
+                    There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+                    for details on setting up this ASP.NET application to support two-factor authentication.
+                </p>
+            </div>
+            <div id="documentsTab" class="tab-pane fade">
+                <p>
+                    There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+                    for details on setting up this ASP.NET application to support two-factor authentication.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
 </div>
-
-
-@*
-
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.NIF)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PolicyType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PolicyNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TotalAnnualReward)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.State)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CriationDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BusinessUnity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClientNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Currency)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExpirationDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MediatingAgent)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Branch)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PaymentMethod)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fractionation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LocationWarranty)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-            </td>
-        </tr>
-        }
-
-    </table>*@
