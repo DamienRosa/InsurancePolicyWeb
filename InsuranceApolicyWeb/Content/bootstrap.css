@@ -1585,31 +1585,27 @@ table {
     background-color: transparent;
 }
 
+th, td {
+    text-align: center;
+    padding: 15px;
+}
+
 th {
-    text-align: left;
+    background-color: #f3f3f3;
+}
+
+td {
+    border-bottom: 0.5px solid #f3f3f3
 }
 
 .table {
     width: 100%;
     margin-bottom: 20px;
+    color: #014751;
+    font-size: 14px;
+    margin-left: -15px;
+    margin-right: -15px;
 }
-
-    .table thead > tr > th,
-    .table tbody > tr > th,
-    .table tfoot > tr > th,
-    .table thead > tr > td,
-    .table tbody > tr > td,
-    .table tfoot > tr > td {
-        padding: 8px;
-        line-height: 1.428571429;
-        vertical-align: top;
-        border-top: 1px solid #dddddd;
-    }
-
-    .table thead > tr > th {
-        vertical-align: bottom;
-        border-bottom: 2px solid #dddddd;
-    }
 
     .table caption + thead tr:first-child th,
     .table colgroup + thead tr:first-child th,
@@ -4177,6 +4173,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .tabbable:after {
     clear: both;
+}
+
+.tab-content {
+    margin-top: 20px;
 }
 
 .tab-content > .tab-pane,

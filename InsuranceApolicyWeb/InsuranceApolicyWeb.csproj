@@ -221,11 +221,25 @@
     <Compile Include="Migrations\201708241729557_ChangeNameToPolicyModel.Designer.cs">
       <DependentUpon>201708241729557_ChangeNameToPolicyModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708281140338_AddedVehicleModel.cs" />
+    <Compile Include="Migrations\201708281140338_AddedVehicleModel.Designer.cs">
+      <DependentUpon>201708281140338_AddedVehicleModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708281618362_AddedRewardModel1.cs" />
+    <Compile Include="Migrations\201708281618362_AddedRewardModel1.Designer.cs">
+      <DependentUpon>201708281618362_AddedRewardModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708281625518_AddedRewardModel2.cs" />
+    <Compile Include="Migrations\201708281625518_AddedRewardModel2.Designer.cs">
+      <DependentUpon>201708281625518_AddedRewardModel2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PolicyModel.cs" />
+    <Compile Include="Models\PolicyRewardModel.cs" />
+    <Compile Include="Models\UserVehicleModel.cs" />
     <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -295,6 +309,7 @@
     <Content Include="Views\Insurance\Details.cshtml" />
     <Content Include="Views\Insurance\Edit.cshtml" />
     <Content Include="Views\Insurance\Index.cshtml" />
+    <Content Include="Views\Shared\_GeneralDataView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -340,6 +355,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708241729557_ChangeNameToPolicyModel.resx">
       <DependentUpon>201708241729557_ChangeNameToPolicyModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708281140338_AddedVehicleModel.resx">
+      <DependentUpon>201708281140338_AddedVehicleModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708281618362_AddedRewardModel1.resx">
+      <DependentUpon>201708281618362_AddedRewardModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708281625518_AddedRewardModel2.resx">
+      <DependentUpon>201708281625518_AddedRewardModel2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

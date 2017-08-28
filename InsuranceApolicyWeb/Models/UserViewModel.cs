@@ -80,6 +80,7 @@ namespace InsuranceApolicyWeb.Models
 
         public string Photo { get; set; }
 
+        [Display(Name = "Nº Cliente")]
         public string ClientNumber { get; set; }
 
         public virtual ICollection<PolicyModel> Policies { get; set; }

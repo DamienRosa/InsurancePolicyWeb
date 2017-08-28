@@ -18,7 +18,7 @@ namespace InsuranceApolicyWeb.Controllers
         // GET: Insurance
         public ActionResult Index()
         {
-            var policies = db.Policies.Include(p => p.User);
+            var policies = db.Policies.Include(p => p.User).Include(p => p.UserVehicles);
             return View(policies.ToList());
         }
 

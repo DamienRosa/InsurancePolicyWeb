@@ -1,0 +1,122 @@
+﻿@model InsuranceApolicyWeb.Models.PolicyModel
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+<h5 class="text-uppercase"><b>Apólice</b></h5>
+
+<div class="row personal-data">
+    <div class="col-md-6 col-sm-6">
+        <div class="row">
+            <div class="col-md-4 th"><b>@Html.DisplayNameFor(model => model.CriationDate)</b></div>
+            <div class="col-md-4 td">@Html.DisplayFor(model => model.CriationDate)</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4  th"><b>@Html.DisplayNameFor(model => model.BusinessUnity)</b></div>
+            <div class="col-md-4  td">@Html.DisplayFor(model => model.BusinessUnity)</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4  th"><b>@Html.DisplayNameFor(model => model.Product)</b></div>
+            <div class="col-md-4  td">@Html.DisplayFor(model => model.Product)</div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-4  th"><b>@Html.DisplayNameFor(model => model.User.ClientNumber)</b></div>
+            <div class="col-md-4  td">@Html.DisplayFor(model => model.User.ClientNumber)</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4  th"><b>@Html.DisplayNameFor(model => model.Currency)</b></div>
+            <div class="col-md-4  td">@Html.DisplayFor(model => model.Currency)</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4  th"><b>@Html.DisplayNameFor(model => model.ExpirationDate)</b></div>
+            <div class="col-md-4  td">@Html.DisplayFor(model => model.ExpirationDate)</div>
+        </div>
+
+    </div>
+
+    <div class="col-md-6 col-sm-6">
+        <div class="row">
+            <div class="col-md-4  th"><b>@Html.DisplayNameFor(model => model.MediatingAgent)</b></div>
+            <div class="col-md-4  td">@Html.DisplayFor(model => model.MediatingAgent)</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4  th"><b>@Html.DisplayNameFor(model => model.Branch)</b></div>
+            <div class="col-md-4  td">@Html.DisplayFor(model => model.Branch)</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4  th"><b>@Html.DisplayNameFor(model => model.PolicyNumber)</b></div>
+            <div class="col-md-4  td">@Html.DisplayFor(model => model.PolicyNumber)</div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="col-md-4  th"><b>@Html.DisplayNameFor(model => model.PaymentMethod)</b></div>
+            <div class="col-md-4  td">@Html.DisplayFor(model => model.PaymentMethod)</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4  th"><b>@Html.DisplayNameFor(model => model.Fractionation)</b></div>
+            <div class="col-md-4  td">@Html.DisplayFor(model => model.Fractionation)</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4  th"><b>@Html.DisplayNameFor(model => model.LocationWarranty)</b></div>
+            <div class="col-md-4  td">@Html.DisplayFor(model => model.LocationWarranty)</div>
+        </div>
+
+    </div>
+
+</div>
+
+<br />
+
+<h5 class="text-uppercase"><b>Veículos seguros</b></h5>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.UserVehicles.ElementAt(0).LicensePlate)</th>
+        <th>@Html.DisplayNameFor(model => model.UserVehicles.ElementAt(0).Brand)</th>
+        <th>@Html.DisplayNameFor(model => model.UserVehicles.ElementAt(0).Model)</th>
+        <th>@Html.DisplayNameFor(model => model.UserVehicles.ElementAt(0).Capacity)</th>
+        <th>@Html.DisplayNameFor(model => model.UserVehicles.ElementAt(0).GrossWeight)</th>
+        <th>@Html.DisplayNameFor(model => model.UserVehicles.ElementAt(0).NumberOfSeats)</th>
+    </tr>
+    @foreach (var item in Model.UserVehicles)
+    {
+        <tr>
+            <td>@Html.DisplayFor(i => item.LicensePlate)</td>
+            <td>@Html.DisplayFor(i => item.Brand)</td>
+            <td>@Html.DisplayFor(i => item.Model)</td>
+            <td>@Html.DisplayFor(i => item.Capacity)</td>
+            <td>@Html.DisplayFor(i => item.GrossWeight)</td>
+            <td>@Html.DisplayFor(i => item.NumberOfSeats)</td>
+        </tr>
+    }
+</table>
+
+<br />
+
+<h5 class="text-uppercase"><b>Prémio de seguro</b></h5>
+
+<div class="row personal-data">
+    <div class="col-md-6 col-sm-6">
+        <div class="row">
+            <div class="col-md-4 th"><b>@Html.DisplayNameFor(model => model.PolicyRewardModel.SimpleReward)</b></div>
+            <div class="col-md-4 td">@Html.DisplayFor(model => model.PolicyRewardModel.SimpleReward) <span>@Html.DisplayFor(model => model.Currency)</span></div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-6">
+        <div class="row">
+            <div class="col-md-4 th"><b>@Html.DisplayNameFor(model => model.PolicyRewardModel.TotalReward)</b></div>
+            <div class="col-md-4 td">@Html.DisplayFor(model => model.PolicyRewardModel.TotalReward) <span>@Html.DisplayFor(model => model.Currency)</span></div>
+        </div>
+    </div>
+</div>
+
