@@ -78,20 +78,15 @@
         </ul>
 
         <div class="tab-content">
+
             <div id="generalDataTab" class="tab-pane fade in active">
                 @Html.Partial("_GeneralDataView", selectedProduct)
             </div>
             <div id="conditionsTab" class="tab-pane fade">
-                <p>
-                    There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                    for details on setting up this ASP.NET application to support two-factor authentication.
-                </p>
+                @Html.Partial("_ConditionsView", selectedProduct)
             </div>
             <div id="documentsTab" class="tab-pane fade">
-                <p>
-                    There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                    for details on setting up this ASP.NET application to support two-factor authentication.
-                </p>
+                @Html.Partial("_DocumentsView", selectedProduct)
             </div>
 
         </div>

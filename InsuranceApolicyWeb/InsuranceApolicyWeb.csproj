@@ -310,6 +310,9 @@
     <Content Include="Views\Insurance\Edit.cshtml" />
     <Content Include="Views\Insurance\Index.cshtml" />
     <Content Include="Views\Shared\_GeneralDataView.cshtml" />
+    <Content Include="Views\Shared\_ConditionsView.cshtml" />
+    <Content Include="Views\Shared\_DocumentsView.cshtml" />
+    <Content Include="Views\Shared\_ToBeImplementedView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
