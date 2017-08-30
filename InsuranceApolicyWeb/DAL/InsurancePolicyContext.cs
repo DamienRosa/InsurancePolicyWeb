@@ -18,6 +18,7 @@ namespace InsuranceApolicyWeb.DAL
         public DbSet<PolicyModel> Policies { get; set; }
         public DbSet<UserVehicleModel> Vehicles { get; set; }
         public DbSet<PolicyRewardModel> Rewards { get; set; }
+        public DbSet<UserDocumentModel> Documents { get; set; }
     }
     
 }

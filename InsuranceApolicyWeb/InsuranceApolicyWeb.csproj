@@ -233,12 +233,17 @@
     <Compile Include="Migrations\201708281625518_AddedRewardModel2.Designer.cs">
       <DependentUpon>201708281625518_AddedRewardModel2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708301129547_addedDocument.cs" />
+    <Compile Include="Migrations\201708301129547_addedDocument.Designer.cs">
+      <DependentUpon>201708301129547_addedDocument.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PolicyModel.cs" />
     <Compile Include="Models\PolicyRewardModel.cs" />
+    <Compile Include="Models\UserDocumentModel.cs" />
     <Compile Include="Models\UserVehicleModel.cs" />
     <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -367,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708281625518_AddedRewardModel2.resx">
       <DependentUpon>201708281625518_AddedRewardModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708301129547_addedDocument.resx">
+      <DependentUpon>201708301129547_addedDocument.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

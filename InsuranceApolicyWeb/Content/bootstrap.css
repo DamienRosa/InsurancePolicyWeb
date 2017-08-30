@@ -1595,7 +1595,7 @@ th {
 }
 
 td {
-    border-bottom: 0.5px solid #f3f3f3
+    border-bottom: 0.5px solid #f3f3f3;
 }
 
 .table {
@@ -4064,6 +4064,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
             color: #014751;
             cursor: default;
             border-bottom: 3px solid #014751;
+            font-weight: bold;
         }
 
     .nav-tabs.nav-justified {
@@ -4179,15 +4180,15 @@ textarea.input-group-sm > .input-group-btn > .btn {
     margin-top: 20px;
 }
 
-.tab-content > .tab-pane,
-.pill-content > .pill-pane {
-    display: none;
-}
+    .tab-content > .tab-pane,
+    .pill-content > .pill-pane {
+        display: none;
+    }
 
-.tab-content > .active,
-.pill-content > .active {
-    display: block;
-}
+    .tab-content > .active,
+    .pill-content > .active {
+        display: block;
+    }
 
 .nav .caret {
     border-top-color: #428bca;
@@ -4444,7 +4445,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
         padding-top: 10px;
         padding-bottom: 10px;
         line-height: 20px;
+        color: #014751;
     }
+
+.navbar-nav > .active > a {
+    font-weight: bold;
+}
 
 @media (max-width: 767px) {
     .navbar-nav .open .dropdown-menu {

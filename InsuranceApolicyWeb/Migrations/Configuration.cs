@@ -63,6 +63,33 @@ namespace InsuranceApolicyWeb.Migrations
             };
             rewards.ForEach(r => context.Rewards.Add(r));
             context.SaveChanges();
+
+            var documents = new List<UserDocumentModel>
+            {
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 1},
+                new UserDocumentModel { DocumentType = "Aviso de Cobrança", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 2},
+                new UserDocumentModel { DocumentType = "Recibo de prémio", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 3},
+                new UserDocumentModel { DocumentType = "Recibo de prémio", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 1},
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 2},
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 3},
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 4},
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 2},
+                new UserDocumentModel { DocumentType = "Aviso de Cobrança", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 3},
+                new UserDocumentModel { DocumentType = "Recibo de prémio", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 4},
+                new UserDocumentModel { DocumentType = "Recibo de prémio", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 3},
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 4},
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 1},
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 2},
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 3},
+                new UserDocumentModel { DocumentType = "Aviso de Cobrança", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 4},
+                new UserDocumentModel { DocumentType = "Recibo de prémio", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 1},
+                new UserDocumentModel { DocumentType = "Recibo de prémio", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 2},
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 3},
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 4},
+                new UserDocumentModel { DocumentType = "Relatório de simulação de Seguro Automóvel", CreationDate = DateTime.Now, Document = "Document" , PolicyModelID = 1}
+            };
+            documents.ForEach(d => context.Documents.Add(d));
+            context.SaveChanges();
         }
     }
 }

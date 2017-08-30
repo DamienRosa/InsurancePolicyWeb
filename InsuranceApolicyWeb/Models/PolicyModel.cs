@@ -71,5 +71,7 @@ namespace InsuranceApolicyWeb.Models
 
         public virtual ICollection<UserVehicleModel> UserVehicles { get; set; }
 
+        public virtual ICollection<UserDocumentModel> UserDocuments { get; set; }
+
     }
 }
